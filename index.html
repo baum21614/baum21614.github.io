@@ -17,7 +17,14 @@
 </head>
 <body>
   <section class="b-s">
-    <button>RadioAktiv</button>
+    <button id="radioaktiv">RadioAktiv</button>
   </section>
+  <script>
+    const button = document.getElementById("radioaktiv");
+
+    button.addEventListener("click", function (event){
+      window.location.href = "./radioaktiv";
+    });
+  </script>
 </body>
 </html>
