@@ -21,12 +21,25 @@
 <body>
     <pre id="pre"> { "status": 404 } </pre>
     <noscript> Enable JS </noscript>
-    <script> fetch('https://api.ipregistry.co/?key=kzp73dquxy134bot')
+    <!--script> fetch('https://api.ipregistry.co/?key=kzp73dquxy134bot')
     .then(function (response) {
         return response.json();
     })
     .then(function (payload) {
         document.getElementById("pre").innerHTML = 'Dear User from ' + payload.location.city + ', ' + payload.location.country.name + ', <br> Your IP is: ' + payload.ip;
-    }); </script>
+    }); 
+    </script-->
+    <script>
+       function json(url) {
+          return fetch(url).then(res => res.json());
+       }
+
+       let apiKey = 'kzp73dquxy134bot';
+       json(`https://api.ipdata.co?api-key=${apiKey}`).then(data => {
+         console.log(data.ip);
+         console.log(data.city);
+         console.log(data.country_code);
+         document.getElementById("pre").innerHTML = 'Dear User from ' + data.city + ', ' + data.country_name + ', <br> Your IP is: ' + data.ip;
+    </script>
 </body>
 </html>
