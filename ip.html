@@ -26,7 +26,7 @@
         return response.json();
     })
     .then(function (payload) {
-        document.getElementById("pre").innerHTML = 'Dear User from ' + payload.location.city + ', ' + payload.location.country.name + ', <br> Your IP is: ' + payload.ip;
+        document.getElementById("pre").innerHTML = 'Dear User from ' + payload.location.city + ', ' + payload.location.country.name + ', <br> Your IP is: ' + payload.location.ip;
     }); </script>
 </body>
 </html>
