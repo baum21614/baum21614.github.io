@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IP</title>
-    <script language="JavaScript" src="http://www.geoplugin.net/javascript.gp" type="text/javascript" defer></script>
     <style>
         body{
             display: flex;
@@ -24,7 +23,7 @@
             left: auto;
             right: auto;
             background: #0057b7;
-            height: 20px;
+            height: 25px;
             width: 70px;
         }
         .flag2{
@@ -33,7 +32,7 @@
             left: auto;
             right: auto;
             background: #ffd700;
-            height: 20px;
+            height: 25px;
             width: 70px;
         }
     </style>
@@ -47,7 +46,7 @@
         return response.json();
     })
     .then(function (payload) {
-        document.getElementById("pre").innerHTML = 'Dear User from ' + payload.city + ', ' + payload.countryName + ', <br> Your IP is: ' + payload.ipAddress;
+        document.getElementById("pre").innerHTML = 'Dear visitor from ' + payload.city + ', ' + payload.countryName + ', <br> Your IP is: ' + payload.ipAddress;
     }); 
     </script>
 </body>
