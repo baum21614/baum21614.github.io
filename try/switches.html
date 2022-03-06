@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="http://localhost/aeccedd.com/aeccedd-imgs/def-0/brand-logo/lg-brandtop/0.-aecc-raw-login.svg" type="image/x-icon">
+    <title>Switch test</title>
+</head>
+<body>
+    <div class="index"><svg data-home xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M3 13h1v7c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-7h1a1 1 0 0 0 .707-1.707l-9-9a.999.999 0 0 0-1.414 0l-9 9A1 1 0 0 0 3 13zm7 7v-5h4v5h-4zm2-15.586 6 6V15l.001 5H16v-5c0-1.103-.897-2-2-2h-4c-1.103 0-2 .897-2 2v5H6v-9.586l6-6z"></path></svg></div>
+    <div>
+        <input type="checkbox" id="check" class="classc">
+        <label style="font-size: 30px;" for="check">Switch 1</label>
+    </div>
+    <br><br><br>
+    <div>
+        <input type="checkbox" id="check2" class="classc">
+        <label style="font-size: 30px;" for="check2" class="red">Switch 2</label>
+    </div>
+    <br><br><br>
+    <div>
+        <input type="checkbox" id="check3" class="classc" disabled>
+        <label style="font-size: 30px;" for="check3">Switch 3</label>
+    </div>
+    <!-- Style -->
+    <style>
+        .index{
+            position: fixed;
+            top: 10px;
+            left: 10px;
+        }
+        .index svg{
+            fill: #747474;
+            cursor: pointer;
+            transition: .3s ease;
+        }
+        .index svg:hover{
+            fill: #131313;
+        }
+        body{
+            font-family: monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            overflow: hidden;
+        }
+        label{
+            cursor: pointer;
+        }
+        /* basic */
+        input[type="checkbox"].classc{
+            visibility: hidden;
+            position: absolute;
+            cursor: pointer;
+            transform: translate(-50000em, -50000em);
+        }
+        input[type="checkbox"].classc:checked ~ label{
+            color: grey;
+        }
+        input[type="checkbox"].classc ~ label{
+            display: flex;
+            align-items: center;
+            user-select: none;
+            position: relative;
+        }
+        input[type="checkbox"].classc:disabled ~ label, input[type="checkbox"].classc:disabled ~ label::before, input[type="checkbox"].classc:disabled ~ label::after{
+            cursor: not-allowed;
+            opacity: .6;
+        }
+        /* ext */
+        input[type="checkbox"].classc ~ label::before{
+            content: '';
+            display: inline-block;
+            width: 3em;
+            height: 1.5em;
+            background: #dfdfdf;
+            margin-right: 10px;
+            border-radius: 200px;
+            cursor: pointer;
+            transition: background .24s ease;
+        }
+        input[type="checkbox"].classc:checked ~ label::before{
+            background: #5ac77b3a;
+        }
+        input[type="checkbox"].classc:checked ~ .red::before{
+            background: #f653533a;
+        }
+        input[type="checkbox"].classc ~ label::after{
+            content: '';
+            display: inline-block;
+            width: 1.2em;
+            height: 1.2em;
+            background: #aaa;
+            border-radius: 50%;
+            position: absolute;
+            left: .2em;
+            cursor: pointer;
+            animation: switchback .24s forwards;
+        }
+        label:focus::before{
+            border: 1px solid grey;
+        }
+        input[type="checkbox"].classc:checked + label::after{
+            animation: switch .24s forwards;
+            transform: translateX(1.4em);
+        }
+        input[type="checkbox"].classc:checked + .red::after{
+            animation: switchred .24s forwards;
+            transform: translateX(1.4em);
+        }
+        @keyframes switch {
+            0%{
+                transform: translateX(0);
+                border-radius: 50%;
+                background: #aaa;
+            }
+            33%{
+                transform: translateX(0);
+                width: 2em;
+                border-radius: 200px;
+            }
+            66%{
+                transform: translateX(0.5em);
+                width: 2em;
+                border-radius: 200px;
+            }
+            100%{
+                transform: translateX(1.4em);
+                width: 1.2em;
+                border-radius: 50%;
+                background: #5ac77b;
+            }
+        }
+        @keyframes switchred {
+            0%{
+                transform: translateX(0);
+                border-radius: 50%;
+                background: #aaa;
+            }
+            33%{
+                transform: translateX(0);
+                width: 2em;
+                border-radius: 200px;
+            }
+            66%{
+                transform: translateX(0.5em);
+                width: 2em;
+                border-radius: 200px;
+            }
+            100%{
+                transform: translateX(1.4em);
+                width: 1.2em;
+                border-radius: 50%;
+                background: #f65353;
+            }
+        }
+        @keyframes switchback {
+            1000%{
+                transform: translateX(0);
+                border-radius: 50%;
+            }
+            66%{
+                transform: translateX(0);
+                width: 2em;
+                border-radius: 200px;
+            }
+            33%{
+                transform: translateX(0.5em);
+                width: 2em;
+                border-radius: 200px;
+            }
+            0%{
+                transform: translateX(1.4em);
+                width: 1.2em;
+                border-radius: 50%;
+            }
+        }
+    </style>
+    <script for="home">document.querySelector("[data-home]").onclick = function(){ window.location.href="/" }</script>
+</body>
+</html>
