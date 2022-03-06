@@ -42,12 +42,12 @@
     <div class="flag"></div><div class="flag2"></div>
     <pre id="pre"> { "content": null } </pre>
     <noscript> Enable JS </noscript>
-    <script> fetch('https://api.ipregistry.co/?key=kzp73dquxy134bot')
+    <script> fetch('https://api.db-ip.com/v2/free/self')
     .then(function (response) {
         return response.json();
     })
     .then(function (payload) {
-        document.getElementById("pre").innerHTML = 'Dear User from ' + payload.location.city + ', ' + payload.location.country.name + ', <br> Your ' + payload.type + ' is: ' + payload.ip;
+        document.getElementById("pre").innerHTML = 'Dear User from ' + payload.stateProv + ', ' + payload.countryName + ', <br> your IP-Adress is: ' + payload.ipAddress;
     }); 
     </script>
 </body>
