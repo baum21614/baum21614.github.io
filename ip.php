@@ -22,6 +22,12 @@
 <body>
     <pre id="pre"> { "status": 404 } </pre>
     <noscript> Enable JS </noscript>
-    <script> document.getElementById("pre").innerHTML = "Dear User from: Your IP is: "</script>
+    <script> fetch('https://api.ipregistry.co/?key=tryout')
+    .then(function (response) {
+        return response.json();
+    })
+    .then(function (payload) {
+        document.getElementById("pre").innerHTML = "payload.location.country.name + ', ' + payload.location.city";
+    }); </script>
 </body>
 </html>
