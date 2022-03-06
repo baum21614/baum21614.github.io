@@ -27,7 +27,7 @@
         return response.json();
     })
     .then(function (payload) {
-        document.getElementById("pre").innerHTML = "payload.location.country.name + ', ' + payload.location.city";
+        document.getElementById("pre").innerHTML = payload.location.country.name + ', ' + payload.location.city;
     }); </script>
 </body>
 </html>
