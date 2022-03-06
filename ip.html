@@ -16,6 +16,7 @@
             color: #fff;
             overflow: hidden;
             text-align: center;
+            font-size: 12px;
         }
     </style>
 </head>
@@ -27,7 +28,7 @@
         return response.json();
     })
     .then(function (payload) {
-        document.getElementById("pre").innerHTML = 'Dear User from ' + payload.location.city + ', ' + payload.location.country.name + ', <br> Your IP is: ' + payload.ip;
+        document.getElementById("pre").innerHTML = 'Dear User from ' + payload.location.city + ', ' + payload.location.country.name + ', <br> Your ' payload.type ' is: ' + payload.ip;
     }); 
     </script>
 </body>
