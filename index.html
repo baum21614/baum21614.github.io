@@ -4,27 +4,53 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .b-s{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height:90vh;
-        }
-    </style>
+    <title>Test site</title>
+    <link rel="shortcut icon" href="http://localhost/aeccedd.com/aeccedd-imgs/def-0/brand-logo/lg-brandtop/0.-aecc-raw-login.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-  <section class="b-s">
-    <button id="radioaktiv">RadioAktiv</button>
-  </section>
-  <script>
-    const button = document.getElementById("radioaktiv");
+    <div class="navigate">
+        <h2>Folder selection:</h2>
+        <button onclick="setTimeout(function(){location.href='https://radioaktiv-gyp.github.io/'} , 300)">RadioAktiv</button>
+        <button onclick="setTimeout(function(){location.href='ip'} , 300)">IP</button><br>
+        <button>Button</button>
+    </div>
+    <div class="PATH"><span id="path"></span><noscript>Enabling JavaScript is recommended</noscript></div>
+    <div class="icon-change">
+        <svg xmlns="http://www.w3.org/2000/svg" id="changecolor" viewBox="0 0 512 512"><path d="M512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256zM256 64V448C362 448 448 362 448 256C448 149.1 362 64 256 64z"/></svg>
+    </div>
+    <footer>
+        <span>&copy;&nbsp;<span id="sp1" onclick='window.location.href="https://instagram.com/Baum21614"'>Baum21614</span>&nbsp;2020</span><span id="span2">By&nbsp;<img src="http://localhost/aeccedd.com/aeccedd-imgs/def-0/brand-logo/lg-brandtop/0.-aecc-raw-login.svg"></span>
+    </footer>
+    
+    <script>
+        document.getElementById("changecolor").addEventListener("click", () =>{
+            document.body.classList.toggle("dark");
+            document.querySelector(".icon-change svg").classList.toggle("dark");
+        })
+        document.getElementById("path").innerHTML = window.location.href;
+    </script>
+    <script>
+        (function () { document.querySelectorAll('button').forEach(setRippleElement); })()
+        function setRippleElement(el) {
+		    const dot = document.createElement('SPAN');
+		    const largestSide = Math.sqrt(
+		      Math.pow(el.offsetWidth, 2) +
+		      Math.pow(el.offsetHeight, 2)
+		    );
+		    const dotSize = Math.ceil((largestSide * 2) / 100);
+		    dot.style = `position: absolute; left: 0; top: 0; width: ${dotSize}px; height: ${dotSize}px; z-index: 3; border-radius: 50%; background: #275efe3d; transform: translate(-50%, -50%) scale(1); opacity: .9; animation: ripple .39s ease-out forwards;`;
+		    el.style.position = 'relative';
+		    el.style.overflow = 'hidden';
+		    el.addEventListener('click', ({pageX, pageY, currentTarget}) => {
+		      const x = ((pageX - currentTarget.offsetLeft) * 100)  / currentTarget.offsetWidth;
+		      const y = ((pageY - currentTarget.offsetTop) * 100)  / currentTarget.offsetHeight;
+		      el.appendChild(dot);
+		      dot.style.left = x + '%';
+		      dot.style.top = y + '%';
+		    })
 
-    button.addEventListener("click", function (event){
-      window.location.href = "https://radioaktiv-gyp.github.io/";
-    });
-  </script>
+		}
+    </script>
 </body>
 </html>
