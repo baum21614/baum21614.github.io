@@ -47,7 +47,7 @@
         return response.json();
     })
     .then(function (payload) {
-        document.getElementById("pre").innerHTML = 'Dear User from ' + payload.stateProv + ', ' + payload.countryName + ', <br> your IP is: ' + payload.ipAddress;
+        document.getElementById("pre").innerHTML = 'Dear User from ' + payload.city + ', ' + payload.countryName + ', <br> Your IP is: ' + payload.ipAddress;
     }); 
     </script>
 </body>
