@@ -27,7 +27,7 @@
         return response.json();
     })
     .then(function (payload) {
-        document.getElementById("pre").innerHTML = 'Dear User from ' +payload.location.city+ ', ' + payload.location.country.name;
+        document.getElementById("pre").innerHTML = 'Dear User from ' + payload.location.city + ', ' + payload.location.country.name;
     }); </script>
 </body>
 </html>
