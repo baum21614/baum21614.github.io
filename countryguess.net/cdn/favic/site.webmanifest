@@ -3,12 +3,12 @@
     "short_name": "",
     "icons": [
         {
-            "src": "https://baum21614.github.io/countryguess.net/cdn/favic/android-chrome-144x144.png",
+            "src": "/android-chrome-144x144.png",
             "sizes": "144x144",
             "type": "image/png"
         }
     ],
-    "theme_color": "#202020",
-    "background_color": "#202020",
+    "theme_color": "#ffffff",
+    "background_color": "#ffffff",
     "display": "standalone"
 }
