@@ -15,5 +15,12 @@
     <footer>
         <span>&copy;&nbsp;<span id="sp1" onclick='window.location.href="https://instagram.com/Baum21614"'>Baum21614</span>&nbsp;2020</span>
     </footer>
+<script>
+    document.getElementById("changecolor").addEventListener("click", () =>{
+        document.body.classList.toggle("dark");
+        document.querySelector(".icon-change svg").classList.toggle("dark");
+    })
+    document.getElementById("path").innerHTML = window.location.href;
+</script>
 </body>
 </html>
