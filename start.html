@@ -3,12 +3,456 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Start</title>
-    <style>*{ padding: 0; margin: 0; box-sizing: border-box; } body{ font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; background: #fff; } .input-container{ display: flex; justify-content: space-evenly; width: 100%; margin-bottom: 3em; } .src-f{ display: flex; align-items: center; justify-content: space-around; } svg{ pointer-events: none; height: 24px; } .svlj{ height: 40px; } .google-icon, .yt-icon, .ljs-icon{ display: flex; justify-content: center; align-items: center; transform: translateX(34px); } .system-inf span{ color: rgba(22, 22, 22, 0.5); } footer{ font-size: 12px; } .yt-icon{ margin-top: 1px; transform: translateX(35px); } .form-provider{ width: 60%; margin-top: 15em; } footer{ position: absolute; bottom: 0; width: 100%; left: 0; } input{ border-radius: 1000px; background: #fff; border: 1px solid #dfe1e5; outline: none; padding: 12px 2.6em; font-size: 16px; font-weight: 500; min-width: 30vw; color: #16171a; transition: .5s; } input:hover{ box-shadow: 0 1px 6px rgba(32,33,36,.28); border-color: rgba(223,225,229,0); } input:focus{ min-width: 33vw; box-shadow: 0 0 20px rgba(0, 0, 0, 0.05); border-color: rgba(223,225,229,0); } button[type="submit"]{ width: 24px; height: 24px; border-radius: 50%; border: none; outline: none; transform: translateX(-35px); cursor: pointer; background: transparent; } button[dt-click]{ background-color: #f8f9fa; border: 1px solid #f8f9fa; border-radius: 4px; color: #3c4043; font-family: arial,sans-serif; font-size: 14px; margin: 11px 4px; padding: 0 16px; line-height: 27px; height: 36px; min-width: 54px; text-align: center; cursor: pointer; user-select: none; } button[dt-click]:hover{ box-shadow: 0 1px 1px rgba(0,0,0,.1); background-color: #f8f9fa; border: 1px solid #dadce0; color: #202124; } button[dt-click]:focus{ border: 1px solid #4285f4; outline: none; } .buttonset{ display: flex; justify-content: space-evenly; align-items: center; position: relative; margin-top: 7em; width: 40%; } @media (prefers-color-scheme: dark){ body{ background-color: #202124; color: #fff; } button[dt-click]{ background-color: #303134; border: 1px solid #303134; border-radius: 4px; color: #e8eaed; } button[dt-click]:hover{ box-shadow: 0 1px 3px rgb(23 23 23 / 24%); background-color: #303134; border: 1px solid #5f6368; color: #e8eaed; } button[dt-click]:focus{ border: 1px solid #5f6368; } input{ border :1px solid #5f6368; background-color: transparent; color: #fff; } input:focus, input:hover{ background-color: #303134; box-shadow: 0 1px 6px 0 #171717; border-color: rgba(223,225,229,0); } .system-inf span{ color: rgba(247, 247, 247, 0.6); } }</style>
+    <link rel="stylesheet" href="https://baum21614-cdn.github.io/css/styling.min.css">   
+    <script src="https://baum21614-cdn.github.io/js/osdetect.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/time.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/weather.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/browserdetect.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/ip.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/currency.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/ripple.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/qr.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/tab.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/interactive.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/worldtime.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/connectionstatus.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/notes.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/speedtest.min.js" defer></script>
+    <script src="https://baum21614-cdn.github.io/js/translator.min.js" type="module" defer></script>
 </head>
 <body>
     <div class="main-div">
+        <div class="up_mainwrapper">
+            <div class="close_bt"><button class="closer_scrc" id="close_allgen"><svg class="csvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="22" width="22"><path d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z"/></svg></button></div>
+            <div class="web_navig">
+                <div class="now_navigation">
+                    <div class="nav_sect0 navig_sect begd active " title="World time" onclick="openTab(event, 'worldtime')">
+                        <div class="imf">
+                            <svg class="side_svg" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 48 48"><path d="m31.35 33.65 2.25-2.25-7.95-8V13.35h-3V24.6ZM24 44q-4.1 0-7.75-1.575-3.65-1.575-6.375-4.3-2.725-2.725-4.3-6.375Q4 28.1 4 24t1.575-7.75q1.575-3.65 4.3-6.375 2.725-2.725 6.375-4.3Q19.9 4 24 4t7.75 1.575q3.65 1.575 6.375 4.3 2.725 2.725 4.3 6.375Q44 19.9 44 24t-1.575 7.75q-1.575 3.65-4.3 6.375-2.725 2.725-6.375 4.3Q28.1 44 24 44Zm0-20Zm0 17q7 0 12-5t5-12q0-7-5-12T24 7q-7 0-12 5T7 24q0 7 5 12t12 5Z"/></svg>
+                        </div>
+                    </div>
+                    <div class="nav_sect1 navig_sect begd " title="QR Code Reader" onclick="openTab(event, 'qrcode')">
+                        <div class="imf">
+                            <svg class="side_svg" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 48 48"><path d="M6 22.5V6h16.5v16.5Zm3-3h10.5V9H9ZM6 42V25.5h16.5V42Zm3-3h10.5V28.5H9Zm16.5-16.5V6H42v16.5Zm3-3H39V9H28.5ZM37.9 42v-4.1H42V42ZM25.5 29.65V25.5h4.1v4.15Zm4.1 4.1v-4.1h4.15v4.1Zm-4.1 4.15v-4.15h4.1v4.15Zm4.1 4.1v-4.1h4.15V42Zm4.15-4.1v-4.15h4.15v4.15Zm0-8.25V25.5h4.15v4.15Zm4.15 4.1v-4.1H42v4.1Z"/></svg>
+                        </div>
+                    </div>
+                    <div class="nav_sect4 navig_sect " title="Currency converter" onclick="openTab(event, 'currency')">
+                        <div class="imf">
+                            <svg class="side_svg" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 48 48"><path d="M24 46q-5.6 0-10.8-3.3Q8 39.4 5 35.15V42H2V30h12v3H7.15q2.55 3.85 7.275 6.925Q19.15 43 24 43q3.9 0 7.375-1.5t6.05-4.075Q40 34.85 41.5 31.375 43 27.9 43 24h3q0 4.55-1.725 8.55-1.725 4-4.725 7-3 3-7 4.725Q28.55 46 24 46Zm-1.45-7.65v-2.7q-2.25-.6-3.775-1.925Q17.25 32.4 16.2 30.1l2.55-.85q.6 1.9 2.125 3t3.475 1.1q2 0 3.325-.975Q29 31.4 29 29.8q0-1.65-1.25-2.775t-4.6-2.525q-3-1.25-4.5-2.7-1.5-1.45-1.5-3.9 0-2.2 1.5-3.75 1.5-1.55 4-1.9V9.7h2.75v2.55q1.9.2 3.3 1.2t2.25 2.75l-2.4 1.15q-.75-1.4-1.85-2.1-1.1-.7-2.6-.7-1.95 0-3.075.9-1.125.9-1.125 2.45 0 1.6 1.3 2.55 1.3.95 4.2 2.15 3.45 1.45 4.9 3.05 1.45 1.6 1.45 4.15 0 1.25-.45 2.3-.45 1.05-1.275 1.8T28 35.125q-1.2.475-2.7.625v2.6ZM2 24q0-4.55 1.725-8.55 1.725-4 4.725-7 3-3 7-4.725Q19.45 2 24 2q5.6 0 10.8 3.3Q40 8.6 43 12.85V6h3v12H34v-3h6.85q-2.55-3.85-7.25-6.925Q28.9 5 24 5q-3.9 0-7.375 1.5t-6.05 4.075Q8 13.15 6.5 16.625 5 20.1 5 24Z"/></svg>
+                        </div>
+                    </div>
+                    <div class="nav_sect5 navig_sect " title="Translator" onclick="openTab(event, 'translator')">
+                        <div class="imf">
+                            <svg class="side_svg" style="fill:#EF5350!important" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 48 48"><path d="m23.75 44 9.05-24h4.1l9.3 24h-4.35l-2.05-6.3h-9.6L27.85 44Zm7.55-9.8h7.1l-3.5-9.7h-.1ZM8 38l-2.75-2.75 10.2-10.2q-1.9-2.2-3.375-4.425Q10.6 18.4 9.5 16h4.35q.85 1.65 1.875 3.125t2.325 3.025q2.25-2.35 3.75-4.875T24.35 12H2V8h14V4h4v4h14v4h-5.65q-1.1 3.45-2.925 6.775Q23.6 22.1 20.95 25.1l4.9 4.95-1.5 4.05L18 28Z"/></svg>
+                        </div>
+                    </div>
+                    <div class="nav_sect6 navig_sect begd " title="Notes" onclick="openTab(event, 'notes')">
+                        <div class="imf">
+                            <svg class="side_svg" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 48 48"><path d="M9 44q-1.2 0-2.1-.9Q6 42.2 6 41V10q0-1.2.9-2.1Q7.8 7 9 7h3.25V4h3.25v3h17V4h3.25v3H39q1.2 0 2.1.9.9.9.9 2.1v31q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h30V19.5H9V41Zm0-24.5h30V10H9Zm0 0V10v6.5ZM14 27v-3h20v3Zm0 9v-3h13.95v3Z"/></svg>
+                        </div>
+                    </div>
+                    <div class="nav_sect7 navig_sect begd " title="Speed Test" onclick="openTab(event, 'wifispeed')">
+                        <div class="imf">
+                            <svg class="side_svg" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 48 48"><path d="M22.05 40.05q-1.4-.55-2.1-2.2-.7-1.65.1-3.15.4-.75 1.975-4 1.575-3.25 3.5-7.175l3.75-7.65Q31.1 12.15 31.9 10.4q.2-.4.625-.625.425-.225.925-.075.5.15.775.55t.125.85q-.45 1.8-1.45 5.925T30.825 25.5q-1.075 4.35-2 7.925T27.6 37.75q-.7 1.65-2.4 2.25-1.7.6-3.15.05Zm24.15-19.7q-.75.75-1.825.75t-1.925-.65Q40.9 19.1 39.25 18q-1.65-1.1-3.15-1.8l1.3-5.2q2.55 1.1 4.725 2.625t4.125 3.225q.75.65.75 1.7 0 1.05-.8 1.8Zm-44.35 0q-.75-.7-.8-1.775-.05-1.075.7-1.725 4.6-4.15 10.3-6.5Q17.75 8 24 8q1.2 0 2.7.1 1.5.1 2.85.35l-2.5 4.9q-.6-.05-1.375-.125T24 13.15q-5.15 0-9.825 1.975Q9.5 17.1 5.55 20.45q-.85.65-1.925.65-1.075 0-1.775-.75Zm35.95 8.4q-.65.65-1.425.7-.775.05-1.475-.45-.55-.4-.95-.7-.4-.3-.7-.55l1.15-4.85q.7.4 1.55 1.025.85.625 1.85 1.475.75.65.75 1.625t-.75 1.725Zm-27.55.05q-.8-.8-.75-1.8.05-1 .7-1.6 2.95-2.5 6.275-3.925Q19.8 20.05 23.9 20.05l-2.8 5.6q-2.05.2-3.8 1.05-1.75.85-3.3 2.2-.8.65-1.9.65-1.1 0-1.85-.75Z"/></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fix_gower">
+                <div class="sections" style="overflow:hidden;max-height:calc(85vh - 2*32px)">
+                    <div id="worldtime" class="timezone fwd__open">
+                        <div class="head_desc">
+                            <header class="ded-shown">
+                                <h2 class="colorful">World time</h2>
+                            </header>
+                        </div>
+                        <div class="main-bodyAL2 special">
+                            <div class="timewrap">
+                                <div class="timerow">
+                                    <div class="time_item timeitem1">
+                                        <div class="clock_a">
+                                            <div class="hand hour" data-hour></div>
+                                            <div class="hand minute" data-minute></div>
+                                            <div class="hand second" data-second></div>
+                                        </div>
+                                        <div class="clock_d">
+                                            <span class="local_time" id="berlintime">--:--:--</span>
+                                        </div>
+                                        <div class="time_location">
+                                            <p class="time_location_info">Berlin, Germany</p>
+                                        </div>
+                                    </div>
+                                    <div class="time_item timeitem2">
+                                        <div class="clock_a">
+                                            <div class="hand hour" data-hour-vancouver></div>
+                                            <div class="hand minute" data-minute-vancouver></div>
+                                            <div class="hand second" data-second-vancouver></div>
+                                        </div>
+                                        <div class="clock_d">
+                                            <span class="local_time" id="vancouvertime">--:--:--</span>
+                                        </div>
+                                        <div class="time_location">
+                                            <p class="time_location_info">Vancouver, BC, Canada</p>
+                                        </div>
+                                    </div>
+                                    <div class="time_item timeitem3">
+                                        <div class="clock_a">
+                                            <div class="hand hour" data-hour-halifax></div>
+                                            <div class="hand minute" data-minute-halifax></div>
+                                            <div class="hand second" data-second-halifax></div>
+                                        </div>
+                                        <div class="clock_d">
+                                            <span class="local_time" id="halifaxtime">--:--:--</span>
+                                        </div>
+                                        <div class="time_location">
+                                            <p class="time_location_info">Halifax, NS, Canada</p>
+                                        </div>
+                                    </div>
+                                    <div class="time_item timeitem4">
+                                        <div class="clock_a">
+                                            <div class="hand hour" data-hour-sjo></div>
+                                            <div class="hand minute" data-minute-sjo></div>
+                                            <div class="hand second" data-second-sjo></div>
+                                        </div>
+                                        <div class="clock_d">
+                                            <span class="local_time" id="sjocrtime">--:--:--</span>
+                                        </div>
+                                        <div class="time_location">
+                                            <p class="time_location_info">San José, Costa Rica</p>
+                                        </div>
+                                    </div>
+                                    <div class="time_item timeitem5">
+                                        <div class="clock_a">
+                                            <div class="hand hour" data-hour-la></div>
+                                            <div class="hand minute" data-minute-la></div>
+                                            <div class="hand second" data-second-la></div>
+                                        </div>
+                                        <div class="clock_d">
+                                            <span class="local_time" id="latime">--:--:--</span>
+                                        </div>
+                                        <div class="time_location">
+                                            <p class="time_location_info">Los Angeles, CA, USA</p>
+                                        </div>
+                                    </div>
+                                    <div class="time_item timeitem6">
+                                        <div class="clock_a">
+                                            <div class="hand hour" data-hour-auckland></div>
+                                            <div class="hand minute" data-minute-auckland></div>
+                                            <div class="hand second" data-second-auckland></div>
+                                        </div>
+                                        <div class="clock_d">
+                                            <span class="local_time" id="aucklandtime">--:--:--</span>
+                                        </div>
+                                        <div class="time_location">
+                                            <p class="time_location_info">Auckland, New Zealand</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="qrcode" class="qrread fwd__open">
+                        <div class="head_desc">
+                            <header class="ded-shown">
+                                <h2 class="colorful">QR Code Scanner</h2>
+                            </header>
+                        </div>
+                        <div class="main-bodyAL2">
+                            <div class="main_qrwrap">
+                                <div class="w_colorqr">
+                                    <div class="filler">
+                                        <div class="qruploadwindow">
+                                            <div class="img_textqrhld">
+                                                <form action="#" class="o_func " style="width:100%;height:100%">
+                                                    <label for="upload_def" class="red_2dio">
+                                                        <svg class="cloud_uploadsvg" xmlns="http://www.w3.org/2000/svg" height="65" width="65" viewBox="0 0 48 48"><path d="M12.5 40q-4.3 0-7.4-3.1Q2 33.8 2 29.5q0-3.9 2.475-6.875t6.375-3.575q1-4.85 4.7-7.925T24.1 8.05q5.65 0 9.475 4.075Q37.4 16.2 37.4 21.9v1.2q3.6-.1 6.1 2.325Q46 27.85 46 31.55q0 3.45-2.5 5.95T37.55 40H25.5q-1.2 0-2.1-.9-.9-.9-.9-2.1V24.1l-4.15 4.15-2.15-2.15 7.8-7.8 7.8 7.8-2.15 2.15-4.15-4.15V37h12.05q2.25 0 3.85-1.6t1.6-3.85q0-2.25-1.6-3.85t-3.85-1.6H34.4v-4.2q0-4.45-3.025-7.65t-7.475-3.2q-4.45 0-7.5 3.2t-3.05 7.65h-.95q-3.1 0-5.25 2.175T5 29.45q0 3.1 2.2 5.325T12.5 37h7v3ZM24 25.5Z"/></svg>
+                                                        <p class="dg_info">Click to upload QR Code</p>
+                                                    </label>
+                                                    <input type="file" hidden id="upload_def" accept="image/*">
+                                                </form>
+                                                <div class="uploaded_qr_showing nonuploaded">
+                                                    <div class="qr_image_holder">
+                                                        <img src="" alt="" id="userqr" class="qr_real">
+                                                    </div>
+                                                    <div class="info_showing">
+                                                        <textarea readonly tabindex="-1" name="tt_showqrinf" class="t_style" id="display_inf" cols="30" rows="10"></textarea>
+                                                        <div class="button_dewr">
+                                                            <button type="button" class="copy_qr">Copy text</button>
+                                                            <button type="button" class="new_qr">New QR Code</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="currency" class="currexch fwd__open">
+                        <div class="head_desc">
+                            <header class="ded-shown">
+                                <h2 class="colorful">Currency converter</h2>
+                            </header>
+                        </div>
+                        <div class="main-bodyAL2" style="height: calc(85vh - 3*32px - 2*48px);">
+                            <div class="currency_wrapper">
+                                <div class="sec_enteram" style="margin-left: calc(32px);">
+                                    <div class="enter_act">
+                                        <form action="#">
+                                            <div class="dg_2">
+                                                <p class="dfzz">Enter amount:</p>
+                                            </div>
+                                            <div class="currinp">
+                                                <div class="currentcurrency" id="ccr">
+                                                    <p class="ccr_innertext">
+                                                        <span id="currcurr">CAD</span>
+                                                    </p>
+                                                </div>
+                                                <input type="number" class="google-input exch-inp" placeholder="" name="curr_amn" id="curram" style="padding-left: calc(3.5em + 13px)">
+                                                <button type="submit" id="exchange_go">
+                                                    <svg class="svg_submit" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="#9aa0a6">
+                                                        <path d="m28.05 35.9-2.15-2.1 8.4-8.4H8v-3h26.3l-8.45-8.45 2.15-2.1L40.05 23.9Z"/>
+                                                    </svg>
+                                                    <svg class="svg_loader" width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                        <path opacity="0.5" fill="#9aa0a6" fill-rule="evenodd" clip-rule="evenodd" d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"/>
+                                                        <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <div class="changecurr">
+                                    <div class="excbox">
+                                        <div class="vbox_from">
+                                            <p class="sweetr">&nbsp;From</p>
+                                            <div class="box_under boxFROM">
+                                                <select name="from" id="excfrom" class="g-select"></select>
+                                            </div>
+                                        </div>
+                                        <div class="cswitch">
+                                            <button class="ex_switch" id="switchcurr">
+                                                <svg class="swapper" style="fill: #d8d8d8;" xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 48 48"><path d="M13.55 42 4 32.45l9.6-9.6 2.1 2.1-6 6h32.45v3H9.7l5.95 5.95Zm20.9-16.85-2.1-2.1 5.95-5.95H5.85v-3H38.3l-6-6L34.4 6l9.6 9.6Z"/></svg>
+                                                <svg class="svg_loader2" width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path opacity="0.5" fill="#9aa0a6" fill-rule="evenodd" clip-rule="evenodd" d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"/>
+                                                    <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                        <div class="vbox_to">
+                                            <p class="sweetr">&nbsp;To</p>
+                                            <div class="box_under boxTO">
+                                                <select name="to" id="excto" class="g-select"></select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="curr_output">
+                                    <div class="text_big2">
+                                        <p class="real_pnb">
+                                            Loading...
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="translator" class="translate fwd__open">
+                        <div class="head_desc">
+                            <header class="ded-shown">
+                                <h2 class="colorful">Translator</h2>
+                            </header>
+                        </div>
+                        <div class="main-bodyAL2">
+                            <div class="tr_wrapper">
+                                <div class="main_translator">
+                                    <div class="all_tr">
+                                        <div class="upper_tr">
+                                            <div class="textarea_f2">
+                                                <textarea class="translate_textarea" name="tr_from" id="trlfrom" placeholder="Enter text to be translated"></textarea>
+                                                <textarea class="translate_textarea" name="tr_to" id="trlto" readonly placeholder="Translation"></textarea>
+                                            </div>
+                                            <div class="op_menutr">
+                                                <div class="spk_and_cpy_from">
+                                                    <div class="from_trsect">
+                                                        <div class="tts_fromtr">
+                                                            <button class="tts_translatefrom" id="bt_ttsfrom">
+                                                                <svg class="side_svg" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 48 48"><path d="M28 41.45v-3.1q4.85-1.4 7.925-5.375T39 23.95q0-5.05-3.05-9.05-3.05-4-7.95-5.35v-3.1q6.2 1.4 10.1 6.275Q42 17.6 42 23.95t-3.9 11.225Q34.2 40.05 28 41.45ZM6 30V18h8L24 8v32L14 30Zm21 2.4V15.55q2.75.85 4.375 3.2T33 24q0 2.85-1.65 5.2T27 32.4Zm-6-16.8L15.35 21H9v6h6.35L21 32.45ZM16.3 24Z"/></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="copy_fromtr">
+                                                            <button class="copytxt_translatefrom" id="bt_copytxtfrom">
+                                                                <svg class="side_svg" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 48 48"><path d="M9 43.95q-1.2 0-2.1-.9-.9-.9-.9-2.1V10.8h3v30.15h23.7v3Zm6-6q-1.2 0-2.1-.9-.9-.9-.9-2.1v-28q0-1.2.9-2.1.9-.9 2.1-.9h22q1.2 0 2.1.9.9.9.9 2.1v28q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h22v-28H15v28Zm0 0v-28 28Z"/></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="lang_from_select">
+                                                            <select class="def_select" name="sel_from" id="sel_from">
+                                                                <option value="sel_opt" hidden>Select language</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="switchlangwrap">
+                                                        <button class="switchlang" id="swlang">
+                                                            <svg class="side_svg" xmlns="http://www.w3.org/2000/svg" height="25" width="25" viewBox="0 0 48 48"><path d="M13.55 42 4 32.45l9.6-9.6 2.1 2.1-6 6h32.45v3H9.7l5.95 5.95Zm20.9-16.85-2.1-2.1 5.95-5.95H5.85v-3H38.3l-6-6L34.4 6l9.6 9.6Z"></path></svg>
+                                                            <svg class="svg_loader_translate" width="25" height="25" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                                <path opacity="0.5" fill="#9aa0a6" fill-rule="evenodd" clip-rule="evenodd" d="M12 19C15.866 19 19 15.866 19 12C19 8.13401 15.866 5 12 5C8.13401 5 5 8.13401 5 12C5 15.866 8.13401 19 12 19ZM12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" fill="currentColor"/>
+                                                                <path d="M2 12C2 6.47715 6.47715 2 12 2V5C8.13401 5 5 8.13401 5 12H2Z"/>
+                                                            </svg>
+                                                        </button>
+                                                    </div>
+                                                    <div class="to_trsect">
+                                                        <div class="lang_to_select">
+                                                            <select class="def_select" name="sel_to" id="sel_to">
+                                                                <option value="sel_opt" hidden>Select language</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="tts_totr">
+                                                            <button class="tts_translateto" id="bt_ttsto">
+                                                                <svg class="side_svg" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 48 48"><path d="M28 41.45v-3.1q4.85-1.4 7.925-5.375T39 23.95q0-5.05-3.05-9.05-3.05-4-7.95-5.35v-3.1q6.2 1.4 10.1 6.275Q42 17.6 42 23.95t-3.9 11.225Q34.2 40.05 28 41.45ZM6 30V18h8L24 8v32L14 30Zm21 2.4V15.55q2.75.85 4.375 3.2T33 24q0 2.85-1.65 5.2T27 32.4Zm-6-16.8L15.35 21H9v6h6.35L21 32.45ZM16.3 24Z"/></svg>
+                                                            </button>
+                                                        </div>
+                                                        <div class="copy_totr">
+                                                            <button class="copytxt_translateto" id="bt_copytxtto">
+                                                                <svg class="side_svg" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 48 48"><path d="M9 43.95q-1.2 0-2.1-.9-.9-.9-.9-2.1V10.8h3v30.15h23.7v3Zm6-6q-1.2 0-2.1-.9-.9-.9-.9-2.1v-28q0-1.2.9-2.1.9-.9 2.1-.9h22q1.2 0 2.1.9.9.9.9 2.1v28q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h22v-28H15v28Zm0 0v-28 28Z"/></svg>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="lower_tr">
+                                            <div class="button_go">
+                                                <button class="tr_go" id="gotranslate">Translate</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="notes" class="noteapp fwd__open">
+                        <div class="head_desc">
+                            <header class="ded-shown">
+                                <h2 class="colorful">Notes</h2>
+                            </header>
+                        </div>
+                        <div class="main-bodyAL2">
+                            <div class="notes_main">
+                                <div class="note_wrapper">
+                                    <div class="note_inner">
+                                        <div class="new_note fixed-n">
+                                            <div class="addnote">
+                                                <div class="add_note_rvdiv">
+                                                    <button class="add_note_btn">
+                                                        <div class="add_n_icon">
+                                                            <svg class="side_svg ssvg_note" xmlns="http://www.w3.org/2000/svg" height="30" width="30" viewBox="0 0 48 48"><path d="M22.5 38V25.5H10v-3h12.5V10h3v12.5H38v3H25.5V38Z"/></svg>
+                                                        </div>
+                                                        <div class="add_n_text">
+                                                            <p class="add_n_p">Add note</p>
+                                                        </div>
+                                                    </button>
+                                                    <div class="create_note">
+                                                        <div class="note_input">
+                                                            <div class="option_title">
+                                                                <input type="text" class="input_reset note_title_input" placeholder=" " name="notestitle" id="notetitle"> 
+                                                                <label class="note_label" for="notetitle" id="placeholder_note">Title</label>
+                                                            </div>
+                                                            <small class="errtxt_up" id="etup"></small>
+                                                            <div class="spacern"></div>
+                                                            <div class="option_noteitself">
+                                                                <textarea name="notecontentbody" id="notecontent" placeholder=" "></textarea>
+                                                                <label class="note_test_label" for="notecontent">Note</label>
+                                                            </div>
+                                                            <small class="errtxt_dwn" id="etdwn">Error Tetx</small>
+                                                            <div class="spacern"></div>
+                                                            <div class="submit_note_button_wrapper">
+                                                                <button class="cancel_note_button noteabtn" id="cnotecreation">Cancel</button>
+                                                                <button class="submit_note_button noteabtn" id="snotecreation">Add</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="wifispeed" class="speedtest fwd__open">
+                        <div class="head_desc">
+                            <header class="ded-shown">
+                                <h2 class="colorful">Speed test</h2>
+                            </header>
+                        </div>
+                        <div class="main-bodyAL2">
+                            <div class="speedtest_wrapper">
+                                <div class="speedtest_main">
+                                    <div class="speedtest_inner">
+                                        <div class="desc_test">
+                                            <p class="desc_test_text">Test your internet download speed</p>
+                                        </div>
+                                        <div class="go_speedTest">
+                                            <button class="testGO" id="starttest">
+                                                <span id="initspeed">GO</span>
+                                                <span id="mbps_st">Mbit/s</span>
+                                            </button>
+                                            <button class="tryAgain">Try again</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="up_gamewrapper">
+            <div class="close_bt"><button class="closer_scrc" id="close_gamel"><svg class="csvg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" height="22" width="22"><path d="m12.45 37.65-2.1-2.1L21.9 24 10.35 12.45l2.1-2.1L24 21.9l11.55-11.55 2.1 2.1L26.1 24l11.55 11.55-2.1 2.1L24 26.1Z"/></svg></button></div>
+            <div class="main_gamelauncher">
+                <a href="./games">./games</a>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <div class="left-c-menu">
+            <div class="icon-left">
+                <button class="open_en" id="openwhole">
+                    <svg class="menu-svg" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 48 48"><path d="M11.3 40q-1.4 0-2.35-.95Q8 38.1 8 36.7q0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95ZM24 40q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35Q25.4 40 24 40Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95ZM11.3 27.3q-1.4 0-2.35-.95Q8 25.4 8 24q0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95ZM11.3 14.6q-1.4 0-2.35-.95Q8 12.7 8 11.3q0-1.4.95-2.35Q9.9 8 11.3 8q1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35Q22.6 8 24 8q1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35Q35.3 8 36.7 8q1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Z"/></svg>
+                </button>
+            </div>
+            <div class="icon-right">
+                <button class="open_en" id="opengaming">
+                    <svg class="menu-svg" xmlns="http://www.w3.org/2000/svg" height="28" width="28" viewBox="0 0 48 48"><path d="M9.45 40q-3.15 0-5.2-2.2-2.05-2.2-2.15-5.15 0-.4.05-.9t.15-.9l4.2-16.8q.7-2.65 2.875-4.35Q11.55 8 14.25 8h19.5q2.7 0 4.875 1.7t2.875 4.35l4.2 16.8q.1.45.175.925.075.475.075.925 0 3-2.125 5.15Q41.7 40 38.55 40q-2.1 0-3.9-1.1-1.8-1.1-2.7-3l-1.4-2.9q-.25-.55-.725-.775Q29.35 32 28.75 32h-9.5q-.6 0-1.075.225T17.45 33l-1.4 2.9q-.9 1.9-2.7 3-1.8 1.1-3.9 1.1Zm.15-3q1.1 0 2.125-.575T13.4 34.6l1.4-2.85q.65-1.3 1.825-2.025Q17.8 29 19.25 29h9.5q1.4 0 2.6.75 1.2.75 1.9 2l1.4 2.85q.65 1.25 1.675 1.825T38.45 37q1.7 0 3.05-1.175 1.35-1.175 1.4-3.075 0-.25-.025-.575-.025-.325-.125-.625l-4.2-16.75q-.4-1.7-1.725-2.75Q35.5 11 33.75 11h-19.5q-1.75 0-3.075 1.05Q9.85 13.1 9.45 14.8l-4.2 16.75q-.05.2-.15 1.15 0 1.9 1.4 3.1Q7.9 37 9.6 37ZM27 21.5q-.6 0-1.05-.45-.45-.45-.45-1.1 0-.6.45-1.025.45-.425 1.1-.425.6 0 1.025.425.425.425.425 1.075 0 .6-.425 1.05-.425.45-1.075.45Zm4-4q-.6 0-1.05-.45-.45-.45-.45-1.1 0-.6.45-1.025.45-.425 1.1-.425.6 0 1.025.425.425.425.425 1.075 0 .6-.425 1.05-.425.45-1.075.45Zm0 8q-.6 0-1.05-.45-.45-.45-.45-1.1 0-.6.45-1.025.45-.425 1.1-.425.6 0 1.025.425.425.425.425 1.075 0 .6-.425 1.05-.425.45-1.075.45Zm4-4q-.6 0-1.05-.45-.45-.45-.45-1.1 0-.6.45-1.025.45-.425 1.1-.425.6 0 1.025.425.425.425.425 1.075 0 .6-.425 1.05-.425.45-1.075.45Zm-18 3.25q-.5 0-.875-.375t-.375-.875v-2.25H13.5q-.5 0-.875-.375T12.25 20q0-.5.375-.875t.875-.375h2.25V16.5q0-.5.375-.875T17 15.25q.5 0 .875.375t.375.875v2.25h2.25q.5 0 .875.375t.375.875q0 .5-.375.875t-.875.375h-2.25v2.25q0 .5-.375.875T17 24.75Z"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="right-c-weather">
+            <div class="inner-weather">
+                <div class="weather-container">
+                    <div class="weather-upper">
+                        <div class="winf-svg">
+                            <img src="" class="wepicin" alt="">
+                        </div>
+                        <div class="winf-text">
+                            <span class="winf-ext">
+                                <span class="sp1"><span class="cond" id="cond">--</span>&deg;C <span class="cond_det" id="condtd">Unknown</span></span>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="weather-lower">
+                        <div class="loc-svg">
+                            <svg class="loc-pin" xmlns="http://www.w3.org/2000/svg" height="20" width="20" viewBox="0 0 48 48"><path d="M24 23.5q1.45 0 2.475-1.025Q27.5 21.45 27.5 20q0-1.45-1.025-2.475Q25.45 16.5 24 16.5q-1.45 0-2.475 1.025Q20.5 18.55 20.5 20q0 1.45 1.025 2.475Q22.55 23.5 24 23.5Zm0 16.55q6.65-6.05 9.825-10.975Q37 24.15 37 20.4q0-5.9-3.775-9.65T24 7q-5.45 0-9.225 3.75Q11 14.5 11 20.4q0 3.75 3.25 8.675Q17.5 34 24 40.05ZM24 44q-8.05-6.85-12.025-12.725Q8 25.4 8 20.4q0-7.5 4.825-11.95Q17.65 4 24 4q6.35 0 11.175 4.45Q40 12.9 40 20.4q0 5-3.975 10.875T24 44Zm0-23.6Z"/></svg>
+                        </div>
+                        <div class="loc-text">
+                            <span class="loc-ext">Penzberg, BY | <span class="ifyll" id="ftime">--:--</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="google-search">
             <center>
             <div class="form-provider">
@@ -35,7 +479,7 @@
                 <div class="input-container yt">
                     <form action="https://youtube.com/results" class="src-f">
                         <div class="yt-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
+                            <svg class="yt-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 65 65">
                                 <path fill="#FF0000" d="M63,14.87c-0.72-2.7-2.85-4.83-5.56-5.56C52.54,8,32.88,8,32.88,8S13.23,8,8.32,9.31 c-2.7,0.72-4.83,2.85-5.56,5.56C1.45,19.77,1.45,30,1.45,30s0,10.23,1.31,15.13c0.72,2.7,2.85,4.83,5.56,5.56 C13.23,52,32.88,52,32.88,52s19.66,0,24.56-1.31c2.7-0.72,4.83-2.85,5.56-5.56C64.31,40.23,64.31,30,64.31,30 S64.31,19.77,63,14.87z"/>
                                 <polygon fill="#FFFFFF" points="26.6,39.43 42.93,30 26.6,20.57"/>
                             </svg>
@@ -53,59 +497,33 @@
             <center>
             <div class="buttonset">
                 <div class="btn-1">
-                    <a href="https://youtube.com/" target="_blank"><button dt-click>YouTube</button></a>
+                    <a href="https://youtube.com/" target="_blank" tabindex="-1"><button dt-click>YouTube</button></a>
                 </div>
                 <div class="btn-1">
-                    <a href="https://instagram.com/" target="_blank"><button dt-click>Instagram</button></a>
+                    <a href="https://instagram.com/" target="_blank" tabindex="-1"><button dt-click>Instagram</button></a>
                 </div>
                 <div class="btn-1">
-                    <a href="https://baum21614.github.io" target="_blank"><button dt-click>Github Pages</button></a>
+                    <a href="https://baum21614.github.io" target="_blank" tabindex="-1"><button dt-click>Github Pages</button></a>
                 </div>
                 <div class="btn-1">
-                    <a href="whatsapp://send?text=digga" target="_blank"><button dt-click>WhatsApp</button></a>
+                    <a href="whatsapp://send?text=digga" target="_blank" tabindex="-1"><button dt-click>WhatsApp</button></a>
                 </div>
             </div>
             </center>
         </div>
         <footer class="footer">
             <span class="system-inf">
-                &nbsp;&nbsp;&nbsp;OS: <span id="innerid_x1"> _ </span> &nbsp;&nbsp;
-                Browser: <span id="innerid_x21"> _ </span> &nbsp;&nbsp;
-                IP: <span id="id-adr"> _ </span>
+                &nbsp;OS: <span id="innerid_x1">Unknown</span> &nbsp;&nbsp;
+                Browser: <span id="innerid_x21">Unknown</span> &nbsp;&nbsp;
+                IP: <span id="id-adr">Unknown</span>
+            </span>
+            <span class="connection_status">
+                <span class="i_status_icon">
+                    <svg class="footersvg" xmlns="http://www.w3.org/2000/svg" height="14" width="14" viewBox="0 0 48 48"><path d="M24 42.65q-.45 0-.8-.175-.35-.175-.65-.525l-21.3-22.5q-.55-.65-.5-1.475.05-.825.65-1.325 4.75-4.3 10.45-6.65Q17.55 7.65 24 7.65q6.4 0 12.075 2.35 5.675 2.35 10.475 6.65.65.5.7 1.225.05.725-.35 1.225l-.5.5q-1.25-1.1-2.9-1.725t-3.55-.625q-3.95 0-6.7 2.75t-2.75 6.65q0 2.1.8 3.775.8 1.675 2.35 2.925l-8.2 8.6q-.3.35-.65.525-.35.175-.8.175Zm16-7.35q-.6 0-1-.4t-.35-.95q.1-1.55.575-2.6T41 29.3q1.3-.9 1.75-1.65.45-.75.45-1.65 0-1.25-.8-2t-2.1-.75q-1.15 0-1.95.425t-1.3 1.175q-.35.5-.875.6-.525.1-1.025-.15-.5-.3-.65-.85-.15-.55.15-1 .9-1.45 2.3-2.325 1.4-.875 3.3-.875 2.45 0 4.175 1.575Q46.15 23.4 46.15 25.85q0 1.6-.675 2.725T43.4 30.85q-1.05.85-1.475 1.5Q41.5 33 41.4 34q-.1.55-.475.925T40 35.3Zm0 6q-.85 0-1.425-.55Q38 40.2 38 39.35q0-.85.575-1.4.575-.55 1.375-.55.85 0 1.425.55.575.55.575 1.4 0 .85-.575 1.4-.575.55-1.375.55Z"/></svg>
+                </span>
+                <span class="i_status_text">Unknown</span>&nbsp;
             </span>
         </footer>
     </div>
-    <script>
-        os_fill = document.getElementById('innerid_x1')
-        os = 'Unknown'
-        if (navigator.appVersion.indexOf('Win') != -1) os = 'Windows'
-        if (navigator.appVersion.indexOf('Mac') != -1) os = 'MacOS'
-        if (navigator.appVersion.indexOf('X11') != -1) os = 'UNIX'
-        if (navigator.appVersion.indexOf('Linux') != -1) os = 'Linux'
-        os_fill.innerHTML = os
-    </script>
-    <script>
-        navigator.saysWho = (() => {
-            const { userAgent } = navigator
-            let match = userAgent.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || []
-            let temp
-            if (/trident/i.test(match[1])) {
-                temp = /\brv[ :]+(\d+)/g.exec(userAgent) || []
-                return `IE ${temp[1] || ''}`
-            }
-            if (match[1] === 'Chrome') {
-                temp = userAgent.match(/\b(OPR|Edge)\/(\d+)/)
-                if (temp !== null) return temp.slice(1).join(' ').replace('OPR', 'Opera')
-                temp = userAgent.match(/\b(Edg)\/(\d+)/)
-                if (temp !== null) return temp.slice(1).join(' ').replace('Edg', 'Edge (Chromium)')
-            }
-            match = match[2] ? [ match[1], match[2] ] : [ navigator.appName, navigator.appVersion, '-?' ]
-            temp = userAgent.match(/version\/(\d+)/i)
-            if (temp !== null) match.splice(1, 1, temp[1])
-            return match.join(' ')
-        })()
-        document.getElementById('innerid_x21').innerHTML = navigator.saysWho
-    </script>
-    <script>fetch('https://api.db-ip.com/v2/free/self').then(function (response) { return response.json() }).then(function (payload) { document.getElementById("id-adr").innerHTML = payload.ipAddress })</script>
 </body>
 </html>
