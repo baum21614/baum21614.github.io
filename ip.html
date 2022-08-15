@@ -17,36 +17,17 @@
             text-align: center;
             font-size: 12px;
         }
-        .flag{
-            position: fixed;
-            top: 10px;
-            left: auto;
-            right: auto;
-            background: #0057b7;
-            height: 25px;
-            width: 70px;
-        }
-        .flag2{
-            position: fixed;
-            top: 35px;
-            left: auto;
-            right: auto;
-            background: #ffd700;
-            height: 25px;
-            width: 70px;
-        }
     </style>
 </head>
 <body>
-    <!--div class="flag"></div><div class="flag2"></div-->
     <pre id="pre"> { "content": null } </pre>
     <noscript> Enable JS </noscript>
     <script> fetch('https://api.db-ip.com/v2/free/self')
     .then(function (response) {
         return response.json();
     })
-    .then(function (payload) {
-        document.getElementById("pre").innerHTML = 'Dear visitor from ' + payload.city + ', ' + payload.countryName + ', <br> Your IP is: ' + payload.ipAddress;
+    .then(function (res) {
+        document.getElementById("pre").innerHTML = 'Dear visitor from ' + res.city + ', ' + res.countryName + ', <br> Your IP is: ' + res.ipAddress;
     }); 
     </script>
 </body>
