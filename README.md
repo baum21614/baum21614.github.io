@@ -7,7 +7,6 @@ baum2164 Main Page
 ## Projects:
 
 1. **[Start page](https://baum21614.github.io/start)**
-1. **[Grovider](https://grovider.co)**
-1. **[Supertext](https://supertext.gg)**
+1. **[Grovider](https://grovider.co)** (offline)
 
 ###### &copy;2023 baum21614
