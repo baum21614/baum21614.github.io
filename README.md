@@ -2,7 +2,7 @@
 
 # baum21614.github.io
 
-baum2164 Main Page
+My github.io
 
 ## Projects:
 
